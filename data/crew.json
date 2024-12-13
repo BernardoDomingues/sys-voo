@@ -10,5 +10,11 @@
     "name": "Guga",
     "phone": "888888",
     "role": "Copiloto"
+  },
+  {
+    "id": 3,
+    "name": "Amigo",
+    "phone": "54654",
+    "role": "Comissário"
   }
 ]
