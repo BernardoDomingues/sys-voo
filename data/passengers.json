@@ -5,7 +5,7 @@
     "address": "Rua Teste",
     "phone": "99999",
     "loyalty": true,
-    "loyaltyPoints": 10
+    "loyaltyPoints": 20
   },
   {
     "id": 2,

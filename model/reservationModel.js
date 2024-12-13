@@ -21,4 +21,8 @@ export const Reservation = {
         reservation.flightId === flightId && reservation.seatNumber === seatNumber
     );
   },
+
+  save(data) {
+    saveData(RESERVATIONS_FILE, data);
+  },
 };
