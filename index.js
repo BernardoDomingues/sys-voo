@@ -1,10 +1,10 @@
 import inquirer from "inquirer";
-import { makeReservation } from "./controller/makeReservation.js";
 import { manageSeats } from "./controller/manageSeats.js";
 import { viewLoyaltyProgram } from "./controller/viewLoyaltyProgram.js";
 import { PassengerController } from "./controller/passengerController.js";
 import { CrewController } from "./controller/crewController.js";
 import { FlightController } from "./controller/flightController.js";
+import { ReservationController } from "./controller/reservationController.js";
 
 const mainMenu = async () => {
   const choices = [
@@ -37,7 +37,7 @@ const mainMenu = async () => {
       await FlightController.registerFlight();
       break;
     case choices[3]:
-      await makeReservation();
+      await ReservationController.makeReservation();
       break;
     case choices[4]:
       await manageSeats();

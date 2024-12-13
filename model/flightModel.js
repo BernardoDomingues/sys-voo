@@ -26,4 +26,10 @@ export const Flight = {
     flights.push(newFlight);
     saveData(FLIGHTS_FILE, flights);
   },
+
+  isFlightActive: (flightId) => {
+    const flights = Flight.getAll();
+    const flight = flights.find((f) => f.id === flightId);
+    return flight && flight.status === "Ativo";
+  },
 };

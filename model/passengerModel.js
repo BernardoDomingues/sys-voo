@@ -7,7 +7,8 @@ export const Passenger = {
 
   create: (name, address, phone, loyalty) => {
     const passengers = Passenger.getAll();
-    const id = passengers.length > 0 ? passengers[passengers.length - 1].id + 1 : 1;
+    const id =
+      passengers.length > 0 ? passengers[passengers.length - 1].id + 1 : 1;
     const newPassenger = {
       id,
       name,
@@ -19,5 +20,14 @@ export const Passenger = {
 
     passengers.push(newPassenger);
     saveData(PASSENGERS_FILE, passengers);
+  },
+
+  updateLoyaltyPoints: (passengerId, points) => {
+    const passengers = Passenger.getAll();
+    const passenger = passengers.find((p) => p.id === passengerId);
+    if (passenger) {
+      passenger.loyaltyPoints = (passenger.loyaltyPoints || 0) + points;
+      saveData(PASSENGERS_FILE, passengers);
+    }
   },
 };

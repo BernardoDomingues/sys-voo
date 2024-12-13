@@ -4,5 +4,11 @@
     "flightId": 1,
     "passengerId": 1,
     "seatNumber": "9000"
+  },
+  {
+    "id": 2,
+    "flightId": 2,
+    "passengerId": 2,
+    "seatNumber": "50"
   }
 ]
