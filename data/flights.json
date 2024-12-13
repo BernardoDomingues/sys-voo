@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "date": "13/12/2024",
+    "time": "17:00",
+    "origin": "Belo Horizonte",
+    "destination": "São Paulo",
+    "planeCode": "123",
+    "pilotId": 1,
+    "copilotId": 2,
+    "crew": [
+      1,
+      2
+    ],
+    "tariff": 200,
+    "status": "Ativo"
+  }
+]
