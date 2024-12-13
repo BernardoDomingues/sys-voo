@@ -1,10 +1,10 @@
 import inquirer from "inquirer";
 import { manageSeats } from "./controller/manageSeats.js";
-import { viewLoyaltyProgram } from "./controller/viewLoyaltyProgram.js";
 import { PassengerController } from "./controller/passengerController.js";
 import { CrewController } from "./controller/crewController.js";
 import { FlightController } from "./controller/flightController.js";
 import { ReservationController } from "./controller/reservationController.js";
+import { LoyaltyProgramController } from "./controller/loyaltyProgramController.js";
 
 const mainMenu = async () => {
   const choices = [
@@ -43,7 +43,7 @@ const mainMenu = async () => {
       await manageSeats();
       break;
     case choices[5]:
-      await viewLoyaltyProgram();
+      await LoyaltyProgramController.viewLoyaltyProgram();
       break;
     case choices[6]:
       console.log("Saindo...");
